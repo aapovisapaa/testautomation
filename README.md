@@ -17,6 +17,10 @@ npx playwright install
 ```bash
 npx playwright test
 ```
+**Running all tests in headed mode (to see the browser in action):**
+```bash
+npx playwright test --headed
+```
 **Showing report after tests:**
 ```bash
 npx playwright show-report
