@@ -43,4 +43,14 @@ export class SearchPage {
         // Wait until results are sorted by checking URL parameter
         await this.page.waitForURL(/sort=price%3Adesc/);
     }
+
+    //Add method for getting prices of all search results shown on page
+    async getAllProductPrices(): Promise<number[]> {
+        const priceLocator = this.page.locator('data[data-price="current"]');
+        await priceLocator.first().waitFor({ state: 'visible' });
+        const priceValues = await priceLocator.evaluateAll(elements => 
+            elements.map(el => (el as HTMLDataElement).value)
+        );
+        return priceValues.map(val => parseFloat(val));
+    }
 }

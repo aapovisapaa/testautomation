@@ -35,3 +35,7 @@ I identified and implemented four additional test scenarios for verkkokauppa.com
 #### 2/4 Robustness: Searches without results
 * **Description:** This test searches for multiple non-existent strings and verifies the "No results" message appears instead of a crash
 * **Why did I select this and why this should be automated?** This ensures that the application handles edge cases well, providing a professional user experience even when data isn't found. Compared to manual testing, this allows always checking multiple different edge cases efficiently.
+#### 3/4 Sorting logic: Price-based sorting
+* **Description:** This test performs a search and verifies that the "Sort by price" functionality works correctly for both ascending and descending orders by mathematically validating the prices of the results.
+* **Why did I select this and why this should be automated?** Fully functional sorting is important for product discovery in an e-commerce application. Using automation ensures that the logic of ordering prices remains functional across updates. Manually checking this is slow, tedious and prone to human error.
+
