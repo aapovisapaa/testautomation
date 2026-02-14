@@ -20,7 +20,7 @@ export class SearchPage {
     async acceptCookies() {
         const acceptButton = this.page.getByRole('button', { name: 'Hyväksy kaikki' });
         try {
-            await acceptButton.waitFor({ state: 'visible', timeout: 3000 });
+            await acceptButton.waitFor({ state: 'visible', timeout: 6000 });
             await acceptButton.click();
         } catch (e) {
             console.log("Accept cookies window did not appear.");
