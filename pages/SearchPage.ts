@@ -6,6 +6,8 @@ export class SearchPage {
     readonly searchInput: Locator;
     readonly sortDropdown: Locator;
     readonly productLinks: Locator;
+    readonly mainNav: Locator;
+    readonly footer: Locator;
 
     // Create constructor with relevant locators
     constructor(page: Page) {
@@ -13,6 +15,8 @@ export class SearchPage {
         this.searchInput = page.getByPlaceholder('Hae kaupasta');
         this.sortDropdown = page.locator('#sort_select');
         this.productLinks = page.locator('article[data-product-id] h3 a');
+        this.mainNav = page.locator('nav');
+        this.footer = page.locator('footer');
     }
 
     // Add method for accepting cookies. 
